@@ -1,19 +1,20 @@
 "use strict";
 // enum Funcao {
-//     'dono da loja' = 1,
-//     'gerente da loja' = 2,
+//     DonoDaLoja = 1,
+//     GerenteDaLoja = 2,
 // }
 // const qualFuncao = (param: number): Funcao | string => { 'quarta';
 //     switch(param){
-//         case 1:
-//             return Funcao['dono da loja'];
+//         case Funcao.DonoDaLoja:
+//             return 'dono da loja';
 //             break;
-//         case 2:
-//             return Funcao['gerente da loja'];
+//         case Funcao.GerenteDaLoja:
+//             return 'gerente da loja';
 //             break;
 //         default:
-//             return 'funcionario'
+//             return 'função não encontrada'
 //             break;
 //     }
 // }
-// console.log(qualFuncao)
+// console.log(qualFuncao(2)); //gerente
+// console.log(qualFuncao(3)); //função não encontrada
