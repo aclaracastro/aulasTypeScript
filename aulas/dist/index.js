@@ -19,6 +19,7 @@
 //     isStudent: true
 // }
 // console.log(ana)
+
 //aula 4 
 var Funcao;
 (function (Funcao) {
