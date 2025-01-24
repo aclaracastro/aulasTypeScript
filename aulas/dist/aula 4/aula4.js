@@ -3,6 +3,8 @@ var Funcao;
 (function (Funcao) {
     Funcao[Funcao["DonoDaLoja"] = 1] = "DonoDaLoja";
     Funcao[Funcao["GerenteDaLoja"] = 2] = "GerenteDaLoja";
+    Funcao[Funcao["Admin"] = 3] = "Admin";
+    Funcao[Funcao["User"] = 4] = "User";
 })(Funcao || (Funcao = {}));
 const qualFuncao = (param) => {
     'quarta';

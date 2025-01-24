@@ -1,12 +1,13 @@
-"use strict";
-var Funcao;
-(function (Funcao) {
-    Funcao[Funcao["DonoDaLoja"] = 1] = "DonoDaLoja";
-    Funcao[Funcao["GerenteDaLoja"] = 2] = "GerenteDaLoja";
-})(Funcao || (Funcao = {}));
-const qualFuncao = (param) => {
-    'quarta';
-    switch (param) {
+enum Funcao {
+    DonoDaLoja = 1,
+    GerenteDaLoja = 2,
+    Admin, //função não encontrada
+    User
+,
+}
+
+const qualFuncao = (param: number): Funcao | string => { 'quarta';
+    switch(param){
         case Funcao.DonoDaLoja:
             return 'dono da loja';
             break;
@@ -14,9 +15,10 @@ const qualFuncao = (param) => {
             return 'gerente da loja';
             break;
         default:
-            return 'função não encontrada';
+            return 'função não encontrada'
             break;
     }
-};
+}
 console.log(qualFuncao(2)); //gerente
 console.log(qualFuncao(3)); //função não encontrada
+

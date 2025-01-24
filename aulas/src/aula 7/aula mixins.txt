@@ -1,0 +1,35 @@
+aula de mixins
+
+definição: mixins são um padrao de design que permite a reutilização de comportamentos entre diferentes classes, evitando a herança múçtipla. os mixins são implementados usando funções que adicionam propriedades e métodos a uma classe base
+
+objetivo:
+- compartilhar funcionalidades entre classes sem estabelecer uma hierarquia rígida. 
+- facilitar a composição de comportamentos reutilizáveis
+
+implements: é usada para definir que uma classe segue a estrutura definida por uma interface ou por outro tipo. em mixins 'implements' é útil para garantir que a classe final respeite a assinatura dos metodos e propriedades definidos no mixin.
+
+*DIFERENÇA DE CLASSE E 
+INTERFACE*
+classe -> implementa a interface
+
+ex mixin
+
+class CanEat{
+	eat(): void{
+	  console.log("this entity can eat");
+	}
+}
+
+class CanWalk{
+	walk(): void{
+	  console.log("this entity can walk"):
+	}
+}
+
+function applyMixins(derivedCtor: any, baseCtors: any[]) {
+baseCtors.forEach(baseCtor => {
+	Object.getOwnPropertyNames(baseCtor.prototype).forEach(name =>{
+	derivedCtor.prototype[name] = baseCtor.prototype[name];
+});
+});
+}

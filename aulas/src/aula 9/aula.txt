@@ -1,0 +1,1 @@
+usa o .d.ts quando nao tem tipagem definida eai consegue compilar e executar

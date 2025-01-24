@@ -1,0 +1,9 @@
+Crie uma interface chamada Shape com o método:
+
+calculateArea(): number
+Em seguida, crie três classes que implementam essa interface:
+
+Circle, que recebe um radius no construtor e implementa o cálculo da área.
+Rectangle, que recebe width e height no construtor e implementa o cálculo da área.
+Triangle, que recebe base e height no construtor e implementa o cálculo da área.
+Crie uma função chamada printArea que aceita um array de objetos do tipo Shape e imprime a área de cada um. Teste a função com instâncias de cada classe.

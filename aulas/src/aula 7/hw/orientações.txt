@@ -1,0 +1,62 @@
+Crie um sistema simples de personagens para um jogo. Cada personagem terá atributos básicos como nome, nível e vida. Além disso, queremos adicionar habilidades especiais a esses personagens, como a capacidade de voar, nadar ou usar magia.
+
+1. Crie uma classe base Personagem com os atributos básicos:
+
+TypeScript
+
+class Personagem {
+  nome: string;
+  nivel: number;
+  vida: number;
+
+  constructor(nome: string, nivel: number, vida: number) {
+    this.nome = nome;
+    this.nivel = nivel;
+    this.vida = vida;
+  }
+}
+2. Crie os seguintes mixins:
+
+Voador: Adiciona a habilidade de voar ao personagem.
+Nadador: Adiciona a habilidade de nadar ao personagem.
+Magico: Adiciona a habilidade de usar magia ao personagem.
+3. Crie classes que representem diferentes tipos de personagens, utilizando os mixins:
+
+Heroi: Um personagem que pode voar e usar magia.
+MonstroMarinho: Um personagem que pode nadar e usar magia.
+4. Demonstre o uso dos personagens criados:
+
+TypeScript
+
+// Exemplo de uso:
+const heroi = new Heroi("SuperMan", 100, 1000);
+heroi.voar();
+heroi.lancarMagia();
+
+const monstroMarinho = new MonstroMarinho("Kraken", 50, 2000);
+monstroMarinho.nadar();
+monstroMarinho.lancarMagia();
+Dicas:
+
+Mixins: Utilize funções que recebem uma classe como parâmetro e retornam uma nova classe com as funcionalidades adicionadas.
+Herança: Utilize herança para criar classes base e derivadas, permitindo a reutilização de código.
+Interfaces: Defina interfaces para representar as habilidades, como IVoador, INadador e IMagico.
+Considerações:
+
+Flexibilidade: Mixins permitem adicionar funcionalidades a classes existentes sem a necessidade de modificar o código original.
+Reutilização: Mixins podem ser reutilizados em diferentes classes, promovendo a reutilização de código.
+Composição: Mixins são uma forma de composição, permitindo combinar diferentes características em um único objeto.
+Desafio:
+
+Crie um mixin Curavel que permita que um personagem cure seus ferimentos ao longo do tempo.
+Crie um personagem que seja ao mesmo tempo voador, nadador e mágico.
+Este exercício te permitirá:
+
+Compreender a diferença entre herança e composição.
+Aprender a utilizar mixins para criar classes flexíveis e reutilizáveis.
+Praticar a programação orientada a objetos em TypeScript.
+Lembre-se: A implementação dos mixins e das classes pode variar. O objetivo é que você compreenda o conceito e aplique a sua criatividade para resolver o problema.
+
+Dica extra: Pesquise sobre o padrão de projeto "Mixin" para aprofundar seus conhecimentos sobre este tema.
+
+Gostaria que eu te ajude com a implementação dos mixins e das classes?
