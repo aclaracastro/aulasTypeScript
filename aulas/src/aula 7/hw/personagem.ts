@@ -1,4 +1,4 @@
-class Personagem {
+class Personagem { //como essa classe nao ta exportando entao precisa disso nome: string... confirmando que a classe vai ter esses tipos especificos
     nome: string;
     nivel: number;
     vida: number;
