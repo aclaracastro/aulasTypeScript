@@ -8,11 +8,11 @@ export class Contrato {
         public tipo: 'CLT' | 'PJ'
     ) {}
 
-    criarContrato(funcionario: Funcionario): string { //iniciando o contrato
+    criarContrato(funcionario: Funcionario): string { 
         return `Contrato criado para ${funcionario.nome} (${funcionario.cargo}) com início em ${this.dataInicio} do tipo ${this.tipo}`;
     }
 
-    rescindirContrato(funcionario: Funcionario): string { //terminando o contrato
+    rescindirContrato(funcionario: Funcionario): string { 
         return `Contrato de ${funcionario.nome} finalizado em ${this.dataTermino}`;
     }
 

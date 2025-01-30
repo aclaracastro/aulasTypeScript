@@ -1,33 +1,41 @@
-// Herda de Usuario.
 import { Usuario } from "../Seguranca/usuario";
+import { ControleAcesso } from "../Seguranca/controleAcesso";
 
-export interface DadoSalario{
+export interface DadoSalario {
     salarioBruto: number;
-    desconto: any;
+    desconto: number;
 }
 
 export class Funcionario extends Usuario {
+    public controleAcesso: ControleAcesso;
     
     constructor(
-        public nome:string,
-        public idade: number,
-        public cpf: string,
-        public cargo: string, 
+        nome: string,
+        idade: number,
+        cpf: string,
+        public cargo: string,
         public salarioBruto: number,
-        public senha: string
-    ) { super(generateUniqueId(),nome, idade, cpf,senha) }
+        senha: string
+    ) {
+        super(generateUniqueId(), nome, idade, cpf, senha);
+        this.controleAcesso = new ControleAcesso();
+    }
     
     atualizarCargo(novoCargo: string): any {
         this.cargo = novoCargo;
-        console.log(`Cargo de ${this.nome}atualizado para ${this.cargo}`)
+        console.log(`Cargo de ${this.nome} atualizado para ${this.cargo}`);
     }
 
     calcularSalario(dados: DadoSalario): number {
         const { salarioBruto, desconto } = dados;
-        const valorDesconto = salarioBruto * (desconto/100);
+        const valorDesconto = salarioBruto * (desconto / 100);
         const salarioLiquido = salarioBruto - valorDesconto;
-        return salarioLiquido;   
-    } 
+        return salarioLiquido;
+    }
+
+    permitirAcesso(): boolean {
+        return this.controleAcesso.permitirAcesso(this);
+    }
 }
 
 function generateUniqueId(): number {

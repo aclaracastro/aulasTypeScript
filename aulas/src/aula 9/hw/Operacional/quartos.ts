@@ -1,10 +1,30 @@
-// Número do quarto, tipo (simples, duplo, suíte), status (ocupado, livre, manutenção), comodidades.
+export enum StatusQuarto{
+    Ocupado = "OCUPADO",
+    Livre = "LIVRE",
+    Manutenção = "MANUTENÇÃO"
+}
+
+export enum TipoQuarto{
+    Suite = "Suíte",
+    Duplo = "Duplo",
+    Varanda = "Com Varanda"
+}
 
 export class Quarto {
     constructor(
-        numero: number, 
-        tipo: "Suíte" | "Duplo" | "Simples", 
-        status: "OCUPADO" | "LIVRE" | "MANUTENÇÃO", 
-        comodidade: string
+        public numero: number, 
+        public tipo: TipoQuarto, 
+        public status: StatusQuarto, 
+        public comodidade: string[]
     ) {}
+
+    alterarStatus(status: StatusQuarto): void {
+        this.status = status;
+    }
+
+    adicionarComodidade(comodidade: string): void{
+        this.comodidade.push(comodidade);
+        console.log(`Comodidade ${comodidade} adicionada ao quarto ${this.numero}`);
+    }
+
 }
