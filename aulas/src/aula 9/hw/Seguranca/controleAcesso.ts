@@ -1,6 +1,7 @@
 import { Usuario } from "./usuario";
 
 export class ControleAcesso {
+    
     private usuarios: Map<number, Usuario> = new Map();
 
     adicionarUsuario(usuario: Usuario): void {

@@ -6,55 +6,21 @@
 6) Cada modulo deve pelo menos importar o metodo permitirAcesso herdado de Segurança
 
 hw/
-├── RecursosHumanos -> gerenciar dados e contratos de funcionarios
+├── RecursosHumanos 
 |    ├── funcionario.ts
 |    ├── contrato.ts
-├── Contabilidade -> gerenciar finanças do hotel
+├── Contabilidade 
 |    ├── aPagar.ts
 |    ├── aReceber.ts
 |    ├── notaFiscal.ts
-├── Operacional -> gerenciar parte de funcionamento do hotel
+├── Operacional 
 |    ├── limpeza.ts
 |    ├── manutencao.ts
 |    ├── quartos.ts
-├── Segurança -> monitorar segurança interna do hotel
-|    ├── controleAcesso.ts -> registra ocorrencia
-|    ├── permissao.ts -> libera o acesso
+├── Segurança
+|    ├── controleAcesso.ts 
 |    ├── usuarios.ts
-├── Recepcao -> gerenciar interação direta com hospedes
+├── Recepcao 
 |    ├── reserva.ts
 |    ├── hospede.ts
-
-USAR INTERFACE, HERANÇA E POLIMORFISMO !!!!!
-herança -> uma classe filha herda as propriedades e métodos de uma classe pai
-
-EXEMPLO:
-class Animal { // classe pai
-    nome: string;
-    constructor(nome: string) {
-        this.nome = nome;
-    }
-    fazerSom() {
-        console.log('Fazendo um som');
-    }
-}
-
-class Cachorro extends Animal { // classe filha que herda da classe pai 
-    latir() { //método próprio além dos herdados
-        console.log('Au au');
-    }
-}
-
-let cachorro = new Cachorro('Rex');
-cachorro.fazerSom(); // Saída: Fazendo um som
-cachorro.latir(); // Saída: Au au
-
-polimorfismo -> (muitas formas) permite que objetos de classes diferentes sejam tratados como se fossem de uma classe pai comum
-
-EXEMPLO:
-function alimentar(animal: Animal) { //espera um objeto do tipo Animal
-    animal.fazerSom(); //específico de cada classe porém é chamado mesmo assim, logo polimorfismo = muitas formas
-}
-
-let cachorro = new Cachorro('Rex');
-alimentar(cachorro); // Saída: Au au
+├── index.ts
