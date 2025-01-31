@@ -1,5 +1,4 @@
 "use strict";
-//Fornecedor, descrição, valor, data de vencimento, forma de pagamento.
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.APagar = exports.FormaPagamento = void 0;
 var FormaPagamento;

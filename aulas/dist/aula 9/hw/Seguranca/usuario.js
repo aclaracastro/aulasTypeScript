@@ -10,7 +10,7 @@ class Usuario {
         this.senha = senha;
     }
     autenticar(senha) {
-        return this.senha === senha; // Verifica se a senha fornecida é igual à senha do usuário
+        return this.senha == senha; // Verifica se a senha fornecida é igual à senha do usuário
     }
     exibirPerfil() {
         return `Usuário: ${this.nome}, ID: ${this.id}, CPF: ${this.cpf}.`;

@@ -64,11 +64,11 @@ console.log("-------------");
 console.log('---Segurança -> controle de acesso---');
 const controleAcesso = new controleAcesso_1.ControleAcesso();
 const usuario1 = new usuario_1.Usuario(1, 'Alice', 30, '159.753.456-02', 'senha123');
-const usuario2 = new usuario_1.Usuario(2, 'Fabio', 28, '987.654.321-00', 'seguro456');
+const usuario2 = new usuario_1.Usuario(0, 'Fabio', 28, '987.654.321-00', 'seguro456');
 controleAcesso.adicionarUsuario(usuario1); //adc usuario no controle acesso
 controleAcesso.adicionarUsuario(usuario2);
-console.log(`Acesso do ${usuario1.nome}:`, controleAcesso.permitirAcesso(usuario1)); // true
-console.log(`Acesso do ${usuario2.nome}:`, controleAcesso.permitirAcesso(usuario2)); // true
+console.log(`Acesso do ${usuario1.nome}:`, controleAcesso.permitirAcesso(usuario1));
+console.log(`Acesso do ${usuario2.nome}:`, controleAcesso.permitirAcesso(usuario2));
 console.log("    ");
 //HOSPEDE
 console.log("-------------");

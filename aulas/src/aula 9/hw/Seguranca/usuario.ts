@@ -13,7 +13,7 @@ export class Usuario implements IUsuario {
     ) {}
 
     autenticar(senha: string): boolean {
-        return this.senha === senha; // Verifica se a senha fornecida é igual à senha do usuário
+        return this.senha == senha; // Verifica se a senha fornecida é igual à senha do usuário
     }
 
     exibirPerfil(): string {
