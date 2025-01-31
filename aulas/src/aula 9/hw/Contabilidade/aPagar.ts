@@ -1,5 +1,3 @@
-//Fornecedor, descrição, valor, data de vencimento, forma de pagamento.
-
 export enum FormaPagamento{
     PIX = "Pix",
     CARTAO = "Cartão de crédito",

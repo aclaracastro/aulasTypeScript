@@ -1,4 +1,3 @@
-//Reservas: Data de entrada, data de saída, número de hóspedes, tipo de quarto, valor total. 
 import { Hospede } from './hospede';  
 import { TipoQuarto } from '../Operacional/quartos';
 
